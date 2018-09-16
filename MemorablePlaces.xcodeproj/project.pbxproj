@@ -14,6 +14,9 @@
 		8C43BDDD214E06AF00B00317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C43BDDB214E06AF00B00317 /* LaunchScreen.storyboard */; };
 		8C43BDE8214E06AF00B00317 /* MemorablePlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43BDE7214E06AF00B00317 /* MemorablePlacesTests.swift */; };
 		8C43BDF3214E06AF00B00317 /* MemorablePlacesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43BDF2214E06AF00B00317 /* MemorablePlacesUITests.swift */; };
+		8C43BE02214E080000B00317 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C43BE01214E080000B00317 /* MapKit.framework */; };
+		8C43BE04214E080B00B00317 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C43BE03214E080B00B00317 /* CoreLocation.framework */; };
+		8C43BE0A214E0BB800B00317 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C43BE09214E0BB800B00317 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		8C43BDEE214E06AF00B00317 /* MemorablePlacesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemorablePlacesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C43BDF2214E06AF00B00317 /* MemorablePlacesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorablePlacesUITests.swift; sourceTree = "<group>"; };
 		8C43BDF4214E06AF00B00317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C43BE01214E080000B00317 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8C43BE03214E080B00B00317 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8C43BE09214E0BB800B00317 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C43BE04214E080B00B00317 /* CoreLocation.framework in Frameworks */,
+				8C43BE02214E080000B00317 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,7 @@
 				8C43BDE6214E06AF00B00317 /* MemorablePlacesTests */,
 				8C43BDF1214E06AF00B00317 /* MemorablePlacesUITests */,
 				8C43BDD0214E06AE00B00317 /* Products */,
+				8C43BE00214E080000B00317 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +108,7 @@
 			children = (
 				8C43BDD2214E06AE00B00317 /* AppDelegate.swift */,
 				8C43BDD4214E06AE00B00317 /* ViewController.swift */,
+				8C43BE09214E0BB800B00317 /* MapViewController.swift */,
 				8C43BDD6214E06AE00B00317 /* Main.storyboard */,
 				8C43BDD9214E06AF00B00317 /* Assets.xcassets */,
 				8C43BDDB214E06AF00B00317 /* LaunchScreen.storyboard */,
@@ -123,6 +133,15 @@
 				8C43BDF4214E06AF00B00317 /* Info.plist */,
 			);
 			path = MemorablePlacesUITests;
+			sourceTree = "<group>";
+		};
+		8C43BE00214E080000B00317 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C43BE03214E080B00B00317 /* CoreLocation.framework */,
+				8C43BE01214E080000B00317 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +212,11 @@
 				TargetAttributes = {
 					8C43BDCE214E06AE00B00317 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8C43BDE2214E06AF00B00317 = {
 						CreatedOnToolsVersion = 10.0;
@@ -257,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C43BDD5214E06AE00B00317 /* ViewController.swift in Sources */,
+				8C43BE0A214E0BB800B00317 /* MapViewController.swift in Sources */,
 				8C43BDD3214E06AE00B00317 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Q58872TYB;
 				INFOPLIST_FILE = MemorablePlaces/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Q58872TYB;
 				INFOPLIST_FILE = MemorablePlaces/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

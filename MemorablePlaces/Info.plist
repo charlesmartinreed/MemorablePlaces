@@ -34,6 +34,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app uses your location to save memorable places to your list.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>This app uses your location to save memorable places to your list.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app uses your location to save memorable places to your list.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
